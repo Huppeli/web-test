@@ -6,7 +6,10 @@ request('http://liiga.fi/tilastot/2017-2018/playoffs/pelaajat/', function (error
     // test out console.log(html);
     var $ = cheerio.load(html);
 
-    var stuff = $('#stats').children('tbody').html();
+    var stuff = $('#stats').children('tbody').children('tr').each(function(i, element){
+
+    }).html();
+
     // var stuff = $('#page').children('h1').html();
     console.log(stuff);
   }
